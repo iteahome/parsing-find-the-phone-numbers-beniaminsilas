@@ -16,8 +16,7 @@ public class HomeApp {
     }
 
     private static void regexCheck(String givenString) {
-        String regex = "[(]*07[0-9]{2}[ )-][0-9]{3}[ -]*[0-9]{3}"; //PhoneNumber
-
+        String regex =("\\(?07\\d{2}\\)?(-|\\s)\\d{3}(-|\\s)?\\d{3}");
 
         RegexChecker regexChecker = new RegexChecker();
         regexChecker.check(regex, givenString);
